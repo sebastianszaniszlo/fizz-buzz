@@ -43,5 +43,18 @@ namespace FizzBuzz.UnitTests.Translator
             result.Should().Be("Fizzbuzz");
 
         }
+
+        [Fact]
+        public void WhenInvokedWithArbitraryNumberShouldReturnTheNumber()
+        {
+            var translator = new FizzBuzzTranslator();
+
+            string result = "";
+            Action act = () => result = translator.Translate(58);
+
+            act.Should().NotThrow();
+            result.Should().Be("58");
+
+        }
     }
 }

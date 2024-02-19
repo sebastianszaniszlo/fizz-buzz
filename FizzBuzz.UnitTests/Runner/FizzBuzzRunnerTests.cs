@@ -11,7 +11,7 @@ namespace FizzBuzz.UnitTests.Runner
         public void WhenCalledShouldNotThrowException()
         {
             var logger = new Mock<ILogger<FizzBuzzRunner>>();
-            var translator = Mock.Of<IFizzBuzzTranslator>();
+            var translator = Mock.Of<ITranslator>();
 
             var runner = new FizzBuzzRunner(logger: logger.Object, translator: translator);
 

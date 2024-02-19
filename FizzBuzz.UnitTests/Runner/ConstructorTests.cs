@@ -10,7 +10,7 @@ namespace FizzBuzz.UnitTests.Runner
         [Fact]
         public void WhenConstructedWithNullLoggerThenShouldThrowArgumentNullException()
         {
-            var translator = Mock.Of<IFizzBuzzTranslator>();
+            var translator = Mock.Of<ITranslator>();
 
             Action act = () => new FizzBuzzRunner(logger: null, translator: translator);
 
