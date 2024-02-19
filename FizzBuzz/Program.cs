@@ -12,7 +12,11 @@ class Program
         IServiceProvider serviceProvider = services.BuildServiceProvider();
 
         // Start FizzBuzz service
-        var fizzBuzzService = serviceProvider.GetService<IFizzBuzz>();
-        
+        var fizzBuzzService = serviceProvider.GetService<IFizzBuzzRunner>();
+
+        //TODO(Seb): Wrap in try catch?
+        fizzBuzzService?.Run();
+        Console.ReadLine();
+
     }
 }

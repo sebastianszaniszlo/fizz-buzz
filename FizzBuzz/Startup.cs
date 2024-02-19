@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using FizzBuzz.Services;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -18,8 +19,13 @@ namespace FizzBuzz
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IConfigurationRoot>(Configuration);
-            services.AddLogging(builder => builder.AddConsole());
+            services.AddLogging(builder =>
+            {
+                builder.SetMinimumLevel(LogLevel.Trace);
+                builder.AddConsole();
+            });
+            services.AddSingleton<IConfigurationRoot>(Configuration);      
+            services.AddSingleton<IFizzBuzzRunner, FizzBuzzRunner>();
         }
     }
 }

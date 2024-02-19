@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Services
 {
-    public interface IFizzBuzz
+    public interface IFizzBuzzRunner
     {
         void Run();
     }
