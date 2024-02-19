@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Services
 {
-    public class FizzBuzzTranslator : IFizzBuzzTranslator
+    public class FizzBuzzTranslator : ITranslator
     {
         public string Translate(int input)
         {

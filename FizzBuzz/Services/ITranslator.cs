@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Services
 {
-    public interface IFizzBuzzTranslator
+    public interface ITranslator
     {
         string Translate(int input);
     }

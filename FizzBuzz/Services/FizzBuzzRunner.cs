@@ -2,12 +2,12 @@
 
 namespace FizzBuzz.Services
 {
-    public class FizzBuzzRunner : IFizzBuzzRunner
+    public class FizzBuzzRunner : IRunner
     {
         private readonly ILogger<FizzBuzzRunner> _logger;
-        private readonly IFizzBuzzTranslator _translator;
+        private readonly ITranslator _translator;
         public FizzBuzzRunner(ILogger<FizzBuzzRunner> logger,
-                              IFizzBuzzTranslator translator)
+                              ITranslator translator)
         {
             if (logger is null)
                 throw new ArgumentNullException(nameof(logger));
