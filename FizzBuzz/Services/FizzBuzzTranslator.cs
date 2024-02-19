@@ -4,7 +4,11 @@
     {
         public string Translate(int input)
         {
-            if (input % 3 == 0)
+            if (input % 15 == 0)
+            {
+                return "Fizzbuzz";
+            }
+            else if (input % 3 == 0)
             {
                 return "Fizz";
             }
@@ -12,10 +16,7 @@
             {
                 return "Buzz";
             }
-            else if (input % 15 == 0)
-            {
-                return "Fizzbuzz";
-            }
+            
 
             return input.ToString();
         }

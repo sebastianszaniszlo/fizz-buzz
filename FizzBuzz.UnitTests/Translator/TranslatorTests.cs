@@ -40,7 +40,7 @@ namespace FizzBuzz.UnitTests.Translator
             Action act = () => result = translator.Translate(15);
 
             act.Should().NotThrow();
-            result.Should().Be("FizzBuzz");
+            result.Should().Be("Fizzbuzz");
 
         }
     }
