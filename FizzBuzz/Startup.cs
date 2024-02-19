@@ -26,6 +26,8 @@ namespace FizzBuzz
             });
             services.AddSingleton<IConfigurationRoot>(Configuration);      
             services.AddSingleton<IFizzBuzzRunner, FizzBuzzRunner>();
+            services.AddSingleton<IFizzBuzzTranslator, FizzBuzzTranslator>();
+
         }
     }
 }

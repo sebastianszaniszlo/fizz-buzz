@@ -3,7 +3,7 @@ using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
 
-namespace FizzBuzz.UnitTests
+namespace FizzBuzz.UnitTests.Runner
 {
     public class FizzBuzzRunnerTests
     {
@@ -11,12 +11,13 @@ namespace FizzBuzz.UnitTests
         public void WhenCalledShouldNotThrowException()
         {
             var logger = new Mock<ILogger<FizzBuzzRunner>>();
+            var translator = Mock.Of<IFizzBuzzTranslator>();
 
-            var runner = new FizzBuzzRunner(logger: logger.Object);
+            var runner = new FizzBuzzRunner(logger: logger.Object, translator: translator);
 
             Action act = () => runner.Run();
 
-            act.Should().NotThrow();            
+            act.Should().NotThrow();
         }
     }
 }
